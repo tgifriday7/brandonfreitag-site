@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact">
+  <h1>Contact</h1>
+
+  <p>If you're a senior leader working through a strategic or organizational challenge, or you've read Work That Holds and want to continue the conversation, reach out.</p>
+
+  <!-- TODO: add Formspree endpoint -->
+  <form class="contact-form" method="POST" action="">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div class="field">
+      <label for="message">Message (optional)</label>
+      <textarea id="message" name="message" rows="6"></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</Base>
+
+<style>
+  .contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 480px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1A1A1A;
+  }
+
+  input,
+  textarea {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1A1A1A;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    padding: 0.65rem 0.75rem;
+    width: 100%;
+    appearance: none;
+    outline: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #0F3460;
+  }
+
+  textarea {
+    resize: vertical;
+    line-height: 1.7;
+  }
+
+  button[type="submit"] {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #0F3460;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.15s ease;
+  }
+
+  button[type="submit"]:hover {
+    opacity: 0.85;
+  }
+</style>

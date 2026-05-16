@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+
+const papers = [
+  {
+    title: "The Five Breakpoints Leaders Miss in Transformation",
+    description: "The five predictable failure patterns that derail large-scale change, and why they are almost always visible before they become costly.",
+    url: "https://brandonfreitag.substack.com/p/the-five-breakpoints-leaders-miss",
+  },
+  {
+    title: "The Stewardship Gap",
+    description: "Why leaders who understand change conceptually still fail to produce it, and what separates intent from structural ownership.",
+    url: "https://workthatholds.com",
+  },
+  {
+    title: "Designed to Stall",
+    description: "The organizational design decisions that make failure the path of least resistance, and how to recognize them before they are built in.",
+    url: "https://workthatholds.com",
+  },
+  {
+    title: "Built for Constraints You No Longer Face",
+    description: "How organizations optimize for yesterday's problems and what it takes to redesign around the constraint set that actually exists.",
+    url: "https://workthatholds.com",
+  },
+  {
+    title: "Before It Breaks",
+    description: "Seven disciplines for leaders who want to build something that holds, applied before the launch, not after the stall.",
+    url: "https://workthatholds.com",
+  },
+];
+---
+
+<Base title="Work That Holds">
+  <h1>Work That Holds</h1>
+
+  <p>Most large initiatives fail not from lack of effort but from structural conditions that make failure the predictable outcome. Work That Holds is a publication for senior leaders who want an honest read on why that happens and what it actually takes to build something that holds.</p>
+
+  <h2>The Series</h2>
+
+  <ol class="paper-list">
+    {papers.map((paper) => (
+      <li class="paper-item">
+        <a href={paper.url} target="_blank" rel="noopener noreferrer" class="paper-title">{paper.title}</a>
+        <p class="paper-description">{paper.description}</p>
+      </li>
+    ))}
+  </ol>
+
+  <p class="archive-link">
+    <a href="https://workthatholds.com" target="_blank" rel="noopener noreferrer">Read the full archive on Substack &rarr;</a>
+  </p>
+</Base>
+
+<style>
+  .paper-list {
+    list-style: none;
+    margin: 0 0 2.5rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .paper-item {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 1.5rem;
+  }
+
+  .paper-title {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0F3460;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-bottom: 0.5rem;
+  }
+
+  .paper-description {
+    font-size: 0.95rem;
+    color: #6B6B6B;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .archive-link {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 1.5rem;
+    margin-top: 0;
+  }
+
+  .archive-link a {
+    font-size: 0.95rem;
+  }
+</style>

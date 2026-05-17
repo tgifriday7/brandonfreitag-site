@@ -92,11 +92,10 @@ nav .container {
 
 .site-name {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--color-body);
   text-decoration: none;
   margin-right: auto;
-  display: none;
 }
 
 .site-name:hover {
@@ -105,7 +104,7 @@ nav .container {
 
 @media (min-width: 600px) {
   .site-name {
-    display: block;
+    font-size: 1rem;
   }
 }
 

@@ -86,8 +86,14 @@ nav {
 nav .container {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 600px) {
+  nav .container {
+    gap: 2rem;
+  }
 }
 
 .site-name {
@@ -110,9 +116,15 @@ nav .container {
 
 nav a {
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: var(--color-body);
   text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  nav a {
+    font-size: 0.95rem;
+  }
 }
 
 nav a:hover {

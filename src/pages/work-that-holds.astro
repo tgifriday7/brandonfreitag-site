@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const papers = [
+const seriesPapers = [
   {
     title: "The Five Breakpoints Leaders Miss",
     description: "The five predictable failure patterns that derail large-scale change and why they are almost always visible before they become costly.",
@@ -33,9 +33,35 @@ const papers = [
     url: "https://www.workthatholds.com/p/the-leader-the-work-requires",
   },
 ];
+
+const practicePapers = [
+  {
+    title: "Your AI Agent Won't Save You",
+    description: "The five breakpoints explain why enterprise AI deployments fail before the technology gets blamed.",
+    url: "https://www.workthatholds.com/p/your-ai-agent-wont-save-you",
+  },
+  {
+    title: "The Win Rate Illusion",
+    date: "June 16",
+    description: "Two illusions the sales industry stopped questioning and the measurement system that sustains both.",
+    url: null,
+  },
+  {
+    title: "The Flaw in Forward Deployment",
+    date: "June 23",
+    description: "Why the Forward Deployed Engineer model solves the wrong problem, and what a complete model requires.",
+    url: null,
+  },
+  {
+    title: "The Band-Aid Problem",
+    date: "June 30",
+    description: "The AI governance conversation is happening at the wrong altitude. The real problem is upstream.",
+    url: null,
+  },
+];
 ---
 
-<Base title="Work That Holds" description="A five-paper series on the structural reasons large-scale initiatives break down and the disciplines required to address them before they do.">
+<Base title="Work That Holds" description="A six-paper series on the structural reasons large-scale initiatives break down and the disciplines required to address them before they do.">
   <h1>Work That Holds</h1>
 
   <p>Seventy percent of large initiatives fail. Most of the remaining thirty percent deliver something less than what was promised. The conditions for both outcomes were set before the work began.</p>
@@ -45,9 +71,24 @@ const papers = [
   <h2>The Why Change Fails series</h2>
 
   <ol class="paper-list">
-    {papers.map((paper) => (
+    {seriesPapers.map((paper) => (
       <li class="paper-item">
         <a href={paper.url} target="_blank" rel="noopener noreferrer" class="paper-title">{paper.title}</a>
+        <p class="paper-description">{paper.description}</p>
+      </li>
+    ))}
+  </ol>
+
+  <h2>The Work in Practice</h2>
+
+  <ol class="paper-list">
+    {practicePapers.map((paper) => (
+      <li class="paper-item">
+        {paper.url ? (
+          <a href={paper.url} target="_blank" rel="noopener noreferrer" class="paper-title">{paper.title}</a>
+        ) : (
+          <span class="paper-title paper-title--upcoming">{paper.title} <span class="paper-date">{paper.date}</span></span>
+        )}
         <p class="paper-description">{paper.description}</p>
       </li>
     ))}
@@ -59,6 +100,10 @@ const papers = [
 </Base>
 
 <style>
+  h2 {
+    margin-top: 2.5rem;
+  }
+
   .paper-list {
     list-style: none;
     margin: 0 0 2.5rem 0;
@@ -81,6 +126,18 @@ const papers = [
     text-decoration: underline;
     text-underline-offset: 3px;
     margin-bottom: 0.5rem;
+  }
+
+  .paper-title--upcoming {
+    color: #6B6B6B;
+    text-decoration: none;
+    cursor: default;
+  }
+
+  .paper-date {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #6B6B6B;
   }
 
   .paper-description {

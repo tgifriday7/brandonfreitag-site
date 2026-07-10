@@ -34,6 +34,17 @@ const seriesPapers = [
   },
 ];
 
+const personalPapers = [
+  {
+    title: "How to Interview the Organization",
+    description: "The questions that reveal whether the conditions for real change actually exist before you commit to leading it.",
+  },
+  {
+    title: "Work That Holds",
+    description: "What it means to build something worth building — and why the leader's own relationship to the work determines whether it holds.",
+  },
+];
+
 const practicePapers = [
   {
     title: "Your AI Agent Won't Save You",
@@ -95,6 +106,17 @@ const practicePapers = [
         ) : (
           <span class="paper-title paper-title--upcoming">{paper.title} <span class="paper-date">{paper.date}</span></span>
         )}
+        <p class="paper-description">{paper.description}</p>
+      </li>
+    ))}
+  </ol>
+
+  <h2>The Work at a Personal Level</h2>
+
+  <ol class="paper-list">
+    {personalPapers.map((paper) => (
+      <li class="paper-item">
+        <span class="paper-title paper-title--upcoming">{paper.title}</span>
         <p class="paper-description">{paper.description}</p>
       </li>
     ))}

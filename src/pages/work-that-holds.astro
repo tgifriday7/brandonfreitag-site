@@ -38,6 +38,7 @@ const personalPapers = [
   {
     title: "The Interview Audit",
     description: "The audit most leaders don't know to run: how to screen an organization for the structural conditions that determine whether your mandate will hold before you accept the offer.",
+    url: "https://www.workthatholds.com/p/the-interview-audit",
   },
   {
     title: "Worth That Holds",
@@ -116,7 +117,11 @@ const practicePapers = [
   <ol class="paper-list">
     {personalPapers.map((paper) => (
       <li class="paper-item">
-        <span class="paper-title paper-title--upcoming">{paper.title}</span>
+        {paper.url ? (
+          <a href={paper.url} target="_blank" rel="noopener noreferrer" class="paper-title">{paper.title}</a>
+        ) : (
+          <span class="paper-title paper-title--upcoming">{paper.title}</span>
+        )}
         <p class="paper-description">{paper.description}</p>
       </li>
     ))}

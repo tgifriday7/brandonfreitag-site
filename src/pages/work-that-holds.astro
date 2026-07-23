@@ -97,6 +97,12 @@ const practicePapers = [
     ))}
   </ol>
 
+  <div class="research-callout">
+    <p class="research-callout__label">The research behind the framework</p>
+    <p class="research-callout__body">466 sources across consulting firms, academic institutions, and business media — organized by breakpoint and searchable by publisher.</p>
+    <a href="https://research.workthatholds.com" target="_blank" rel="noopener noreferrer" class="research-callout__link">Explore the evidence &rarr;</a>
+  </div>
+
   <h2>The Work in Practice</h2>
 
   <ol class="paper-list">
@@ -178,6 +184,43 @@ const practicePapers = [
     color: #6B6B6B;
     line-height: 1.6;
     margin: 0;
+  }
+
+  .research-callout {
+    border: 1px solid #D0D9E8;
+    border-left: 4px solid #0F3460;
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    margin: 2.5rem 0;
+    background: #F5F8FC;
+  }
+
+  .research-callout__label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0F3460;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .research-callout__body {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin: 0 0 0.85rem 0;
+  }
+
+  .research-callout__link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0F3460;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .research-callout__link:hover {
+    color: #1a5276;
   }
 
   .archive-link {

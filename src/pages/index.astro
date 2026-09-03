@@ -2,11 +2,25 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Home" description="Brandon Freitag works at the intersection of strategy, structure and execution — helping senior leaders build organizational change that holds.">
+<Base title="Home" description="Brandon Freitag works at the intersection of strategy, structure, and execution, helping senior leaders build organizational change that holds.">
   <div class="home">
     <p class="positioning">AI won't save a broken organization. It will just break it faster.</p>
-    <p class="bio">Brandon Freitag has been inside the room where that realization hits. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it. His value is a track record, not a credential.</p>
-    <p class="series-link">The track record is documented. <a href="/work-that-holds">Work That Holds &rarr;</a></p>
+    <div class="home-grid">
+      <div>
+        <p class="bio">Brandon Freitag has been inside the room where that realization hits. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it. His value is a track record, not a credential.</p>
+        <ul class="proof">
+          <li>Built and led a national strategic architecture practice at Google Cloud, sustaining a win rate twice the field baseline across the company's most complex pursuits.</li>
+          <li>As a Fortune 500 executive leading a globally distributed team of 140, cut time-to-environment for a mission-critical patient platform by 90% and operating costs by 27%.</li>
+          <li>Writes <em>Why Change Fails</em>, a six-paper series on why large-scale initiatives break down and how to design against it.</li>
+        </ul>
+        <nav class="home-links" aria-label="Primary destinations">
+          <a href="/work-that-holds">Work That Holds &rarr;</a>
+          <a href="/about">About Brandon &rarr;</a>
+          <a href="https://linkedin.com/in/brfreitag" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+        </nav>
+      </div>
+      <img src="/brandon.jpg" alt="Brandon Freitag" class="home-photo" width="240" height="300" />
+    </div>
   </div>
 </Base>
 
@@ -22,21 +36,62 @@ import Base from '../layouts/Base.astro';
     line-height: 1.2;
     letter-spacing: -0.01em;
     color: var(--color-body);
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 700px) {
+    .home-grid {
+      grid-template-columns: 1fr 240px;
+    }
   }
 
   .bio {
     font-size: 1rem;
     line-height: 1.7;
     color: var(--color-body);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     max-width: 600px;
+  }
+
+  .proof {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+    max-width: 600px;
+  }
+
+  .proof li {
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-secondary);
+  }
+
+  .home-photo {
+    width: 240px;
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(20, 30, 50, 0.08), 0 14px 30px -18px rgba(20, 30, 50, 0.35);
+    justify-self: start;
   }
 
   .home-links {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.75rem;
     padding: 0;
     border: none;
     margin: 0;
@@ -44,9 +99,9 @@ import Base from '../layouts/Base.astro';
 
   .home-links a {
     font-size: 1rem;
+    font-weight: 500;
     color: var(--color-primary);
     text-decoration: underline;
     text-underline-offset: 3px;
-    display: inline;
   }
 </style>

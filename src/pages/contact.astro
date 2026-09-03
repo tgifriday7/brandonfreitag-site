@@ -45,7 +45,7 @@ import Base from '../layouts/Base.astro';
   label {
     font-size: 0.875rem;
     font-weight: 700;
-    color: #1A1A1A;
+    color: var(--color-body);
   }
 
   input,
@@ -53,9 +53,9 @@ import Base from '../layouts/Base.astro';
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: #1A1A1A;
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
+    color: var(--color-body);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     padding: 0.65rem 0.75rem;
     width: 100%;
     appearance: none;
@@ -64,7 +64,7 @@ import Base from '../layouts/Base.astro';
 
   input:focus,
   textarea:focus {
-    border-color: #0F3460;
+    border-color: var(--color-primary);
   }
 
   textarea {
@@ -76,8 +76,8 @@ import Base from '../layouts/Base.astro';
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    color: #FFFFFF;
-    background-color: #0F3460;
+    color: #fff;
+    background-color: var(--color-primary);
     border: none;
     padding: 0.75rem 2rem;
     cursor: pointer;

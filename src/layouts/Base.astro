@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+// The home page's tab title is the name alone, for name searches.
+const fullTitle = title === 'Home' ? 'Brandon Freitag' : `${title} — Brandon Freitag`;
 ---
 
 <!doctype html>
@@ -16,7 +18,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta property="og:title" content={`${title} — Brandon Freitag`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Brandon Freitag" />
@@ -28,7 +30,7 @@ const { title, description } = Astro.props;
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" /></noscript>
-    <title>{title} — Brandon Freitag</title>
+    <title>{fullTitle}</title>
   </head>
   <body>
     <header>

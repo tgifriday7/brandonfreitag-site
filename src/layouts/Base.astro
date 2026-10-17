@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 
+import Analytics from '@vercel/analytics/astro';
 import { personJsonLd } from '../data/person';
 
 interface Props {
@@ -58,5 +59,6 @@ const fullTitle = title === 'Home' ? 'Brandon Freitag' : `${title} — Brandon F
         &copy; Brandon Freitag
       </div>
     </footer>
+    <Analytics />
   </body>
 </html>

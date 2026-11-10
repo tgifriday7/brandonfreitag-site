@@ -1,8 +1,9 @@
 /*
   schema.org markup for the person behind this site. It tells search
   engines and AI assistants that brandonfreitag.com, LinkedIn, the Work
-  That Holds essays, the research site, and the book are one person.
-  Worth That Holds LLC stays out until the practice launches publicly.
+  That Holds essays, the research site, the book, and the Worth That
+  Holds practice are one person. (The practice joined 2026-11-10, after
+  its public launch.)
 */
 const site = 'https://brandonfreitag.com';
 
@@ -29,7 +30,13 @@ export const personJsonLd = {
         'https://www.workthatholds.com',
         'https://research.workthatholds.com',
         'https://builttobereplaced.com',
+        'https://worththatholds.com',
       ],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Worth That Holds LLC',
+        url: 'https://worththatholds.com',
+      },
     },
     {
       '@type': 'Book',

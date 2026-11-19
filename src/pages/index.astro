@@ -9,6 +9,54 @@ import Base from '../layouts/Base.astro';
     <div class="home-grid">
       <div>
         <p class="bio">Brandon Freitag has been inside the rooms where that happens. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it.</p>
+        <figure class="fig-wrap">
+          <div class="fig">
+            <p class="fig__label">Fig. 01 &middot; Both sides of the table</p>
+            <div class="fig__body">
+              <svg viewBox="0 0 640 320" role="img" aria-labelledby="fig01-title fig01-desc" xmlns="http://www.w3.org/2000/svg">
+                <title id="fig01-title">Both sides of the table</title>
+                <desc id="fig01-desc">A plan view of a boardroom table drawn like a patent sheet. Numbered callouts mark the decision on the table, the vendor side where the case is built, the executive side where the outcome is owned, the single crossing from one side to the other, and the advisor's seat at the end of the table.</desc>
+                <!-- 10: the table -->
+                <rect class="f-navy" x="150" y="125" width="340" height="85" />
+                <text class="f-mono f-paper" x="320" y="172" text-anchor="middle" font-size="13">the decision</text>
+                <!-- 12: vendor side seats -->
+                <rect class="f-seat" x="187" y="101" width="26" height="14" />
+                <rect class="f-seat" x="267" y="101" width="26" height="14" />
+                <rect class="f-seat" x="347" y="101" width="26" height="14" />
+                <rect class="f-seat" x="427" y="101" width="26" height="14" />
+                <!-- 14: executive side seats -->
+                <rect class="f-seat" x="187" y="220" width="26" height="14" />
+                <rect class="f-seat" x="267" y="220" width="26" height="14" />
+                <rect class="f-seat" x="347" y="220" width="26" height="14" />
+                <rect class="f-seat" x="427" y="220" width="26" height="14" />
+                <!-- 18: the advisor's seat, at the end of the table -->
+                <rect class="f-seat f-seat--now" x="500" y="154" width="14" height="26" />
+                <!-- 16: the crossing -->
+                <path class="f-gold" d="M200,101 V78 H112 V258 H280 V248" fill="none" />
+                <path class="f-gold-fill" d="M275,248 L285,248 L280,238 Z" />
+                <!-- callouts -->
+                <text class="f-mono f-ink" x="556" y="124" font-size="15">10</text>
+                <line class="f-lead" x1="549" y1="126" x2="492" y2="138" />
+                <text class="f-mono f-ink" x="296" y="64" font-size="15">12</text>
+                <line class="f-lead" x1="294" y1="68" x2="282" y2="97" />
+                <text class="f-mono f-ink" x="376" y="292" font-size="15">14</text>
+                <line class="f-lead" x1="374" y1="283" x2="362" y2="238" />
+                <text class="f-mono f-ink" x="76" y="172" font-size="15">16</text>
+                <line class="f-lead" x1="94" y1="167" x2="110" y2="167" />
+                <text class="f-mono f-ink" x="556" y="234" font-size="15">18</text>
+                <line class="f-lead" x1="552" y1="227" x2="517" y2="184" />
+              </svg>
+            </div>
+            <ul class="fig__legend">
+              <li><span>10</span>The decision on the table</li>
+              <li><span>12</span>The vendor side, where the case is built</li>
+              <li><span>14</span>The executive side, where the outcome is owned</li>
+              <li><span>16</span>The crossing, made once</li>
+              <li><span>18</span>The advisor's seat, serving both sides</li>
+            </ul>
+          </div>
+          <figcaption class="fig__caption">The career as a patent sheet, a form he has filed for real. The case is built on one side, the outcome is owned on the other, and the practice now sits where it can see both.</figcaption>
+        </figure>
         <ul class="proof">
           <li class="proof-metric">
             <span class="proof-metric__figure"><span class="proof-metric__num">2&times;</span><span class="proof-metric__unit">win rate</span></span>
@@ -19,7 +67,7 @@ import Base from '../layouts/Base.astro';
             <span>As a senior director at a Fortune 200 healthcare company, leading an organization of up to 140, cut time-to-environment for a mission-critical patient platform by 90% and operating costs by 27%.</span>
           </li>
           <li>Author of <a href="https://builttobereplaced.com"><em>Built to Be Replaced: How Solution Engineers Outlast AI</em></a>, publishing January 2027.</li>
-          <li>Writes Work That Holds, essays on why organizational change holds or doesn't. Its core series, <em>Why Change Fails</em>, is six papers on why large-scale initiatives break down and how to design against it.</li>
+          <li>Writes <a href="https://workthatholds.com">Work That Holds</a>, essays on why organizational change holds or doesn't. Its core series, <a href="/work-that-holds"><em>Why Change Fails</em></a>, is six papers on why large-scale initiatives break down and how to design against it.</li>
           <li>Runs <a href="https://worththatholds.com">Worth That Holds</a>, the advisory practice built on that work: organizational and AI readiness diagnostics for leaders whose change has to hold.</li>
         </ul>
         <nav class="home-links" aria-label="Primary destinations">
@@ -93,6 +141,78 @@ import Base from '../layouts/Base.astro';
     color: var(--color-body);
     margin-bottom: 2rem;
     max-width: 600px;
+  }
+
+  .fig-wrap {
+    max-width: 600px;
+    margin: 0 0 2.5rem;
+  }
+
+  .fig {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+
+  .fig__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    padding: 0.55rem 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .fig__body {
+    padding: 0.75rem 0.9rem 0.25rem;
+  }
+
+  .fig__body svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .fig :global(.f-navy) { fill: var(--color-primary); }
+  .fig :global(.f-paper) { fill: var(--color-bg); }
+  .fig :global(.f-ink) { fill: var(--color-body); }
+  .fig :global(.f-mono) { font-family: var(--font-mono); }
+  .fig :global(.f-seat) { fill: var(--color-bg); stroke: var(--color-body); stroke-width: 1.25; }
+  .fig :global(.f-seat--now) { fill: var(--color-gold); }
+  .fig :global(.f-gold) { stroke: var(--color-gold); stroke-width: 2; }
+  .fig :global(.f-gold-fill) { fill: var(--color-gold); }
+  .fig :global(.f-lead) { stroke: var(--color-body); stroke-width: 0.75; }
+
+  .fig__legend {
+    list-style: none;
+    margin: 0;
+    padding: 0.6rem 0.9rem 0.8rem;
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .fig__legend li {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: var(--color-secondary);
+  }
+
+  .fig__legend li span {
+    display: inline-block;
+    min-width: 1.6rem;
+    font-weight: 500;
+    color: var(--color-body);
+  }
+
+  .fig__caption {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--color-secondary);
+    margin-top: 0.6rem;
   }
 
   .proof {

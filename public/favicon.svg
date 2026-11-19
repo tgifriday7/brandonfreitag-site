@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#1f3a5f"/>
-  <!-- W mark rendered as a load-bearing baseline that holds -->
-  <path d="M14 20 L22 44 L32 26 L42 44 L50 20" fill="none" stroke="#fbfaf7" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-  <line x1="14" y1="50" x2="50" y2="50" stroke="#c8d2e0" stroke-width="3" stroke-linecap="round"/>
+  <rect width="64" height="64" fill="#1f3a5f"/>
+  <!-- The family mark: a load-bearing W held by a gold baseline. -->
+  <path d="M14 18 L22 42 L32 24 L42 42 L50 18" fill="none" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="14" y1="50" x2="50" y2="50" stroke="#c9972c" stroke-width="4"/>
 </svg>

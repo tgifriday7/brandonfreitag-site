@@ -14,6 +14,8 @@ interface Props {
 const { title, description, person = false } = Astro.props;
 // The home page's tab title is the name alone, for name searches.
 const fullTitle = title === 'Home' ? 'Brandon Freitag' : `${title} — Brandon Freitag`;
+const canonical = new URL(Astro.url.pathname, 'https://brandonfreitag.com').href;
+const ogImage = 'https://brandonfreitag.com/og/default.png';
 ---
 
 <!doctype html>
@@ -23,13 +25,23 @@ const fullTitle = title === 'Home' ? 'Brandon Freitag' : `${title} — Brandon F
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Brandon Freitag" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{fullTitle}</title>
     {person && <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />}
   </head>

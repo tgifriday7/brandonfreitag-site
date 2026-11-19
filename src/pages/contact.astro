@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="Contact" description="Reach out to Brandon Freitag to discuss a strategic or organizational challenge, or to continue the conversation from Work That Holds.">
+  <p class="kicker">A direct line</p>
   <h1>Contact</h1>
 
   <p>If you're a senior leader working through a strategic or organizational challenge, or you've read Work That Holds and want to continue the conversation, reach out.</p>
@@ -42,9 +43,12 @@ import Base from '../layouts/Base.astro';
   }
 
   label {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-body);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
   }
 
   input,
@@ -58,12 +62,12 @@ import Base from '../layouts/Base.astro';
     padding: 0.65rem 0.75rem;
     width: 100%;
     appearance: none;
-    outline: none;
   }
 
-  input:focus,
-  textarea:focus {
+  input:focus-visible,
+  textarea:focus-visible {
     border-color: var(--color-primary);
+    outline-offset: 0;
   }
 
   textarea {
@@ -74,17 +78,16 @@ import Base from '../layouts/Base.astro';
   button[type="submit"] {
     font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     background-color: var(--color-primary);
     border: none;
     padding: 0.75rem 2rem;
     cursor: pointer;
     align-self: flex-start;
-    transition: opacity 0.15s ease;
   }
 
   button[type="submit"]:hover {
-    opacity: 0.85;
+    background-color: #16304f;
   }
 </style>

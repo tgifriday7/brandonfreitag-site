@@ -15,6 +15,7 @@
   --color-primary: #1F3A5F;
   --color-gold: #8C6A15;
   --color-bg: #FFFFFF;
+  --color-surface: #F4F5F7;
   --color-body: #16181C;
   --color-secondary: #43464D;
   --color-border: #D8DADE;
@@ -43,6 +44,32 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Focus and selection, in the house language */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* The drafting label: mono, uppercase, on a 2px gold baseline.
+   Shared by every page; see the v2 standard in worththatholds-site. */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.75rem;
 }
 
 /* Typography */

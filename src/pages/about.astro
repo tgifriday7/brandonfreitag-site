@@ -30,6 +30,17 @@ import Base from '../layouts/Base.astro';
 
   <p>His book, <a href="https://builttobereplaced.com"><em>Built to Be Replaced: How Solution Engineers Outlast AI</em></a>, publishes in January 2027.</p>
 
+  <figure class="patent book-exhibit">
+    <p class="patent__label">The book &middot; January 2027</p>
+    <picture>
+      <source srcset="/book-render.webp" type="image/webp" />
+      <img src="/book-render.png" alt="Built to Be Replaced, the physical book" width="961" height="1158" loading="lazy" />
+    </picture>
+    <figcaption class="patent__caption">
+      <a href="https://builttobereplaced.com" target="_blank" rel="noopener noreferrer">Built to Be Replaced: How Solution Engineers Outlast AI</a>.
+    </figcaption>
+  </figure>
+
   <p>That body of work is now a practice: <a href="https://worththatholds.com">Worth That Holds</a>, where he advises leaders on organizational and AI readiness.</p>
 
   <p>Brandon is based in Denver, Colorado and Phoenix, Arizona.</p>
@@ -78,5 +89,17 @@ import Base from '../layouts/Base.astro';
     color: var(--color-secondary);
     padding: 0.7rem 0.9rem 0.8rem;
     border-top: 1px solid var(--color-border);
+  }
+
+  .book-exhibit {
+    max-width: 260px;
+  }
+
+  .book-exhibit img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5rem 0.5rem;
+    box-sizing: border-box;
   }
 </style>

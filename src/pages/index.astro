@@ -7,9 +7,10 @@ import Base from '../layouts/Base.astro';
     <p class="kicker">Strategy &middot; Structure &middot; Execution</p>
     <h1 class="positioning">AI programs rarely stall on the technology. They stall on what nobody will say out loud.</h1>
     <div class="home-grid">
-      <div>
-        <p class="bio">Brandon Freitag has been inside the rooms where that happens. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it.</p>
-        <figure class="fig-wrap">
+      <p class="bio">Brandon Freitag has been inside the rooms where that happens. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it.</p>
+      <img src="/brandon.jpg" alt="Brandon Freitag" class="home-photo" width="240" height="300" />
+    </div>
+    <figure class="fig-wrap">
           <div class="fig">
             <p class="fig__label">Fig. 01 &middot; Both sides of the table</p>
             <div class="fig__body">
@@ -87,10 +88,7 @@ import Base from '../layouts/Base.astro';
             <span class="home-links__label">Elsewhere</span>
             <span class="home-links__name">LinkedIn</span>
           </a>
-        </nav>
-      </div>
-      <img src="/brandon.jpg" alt="Brandon Freitag" class="home-photo" width="240" height="300" />
-    </div>
+    </nav>
   </div>
 </Base>
 
@@ -127,6 +125,7 @@ import Base from '../layouts/Base.astro';
     grid-template-columns: 1fr;
     gap: 2.5rem;
     align-items: start;
+    margin-bottom: 2.5rem;
   }
 
   @media (min-width: 700px) {
@@ -139,7 +138,7 @@ import Base from '../layouts/Base.astro';
     font-size: 1rem;
     line-height: 1.7;
     color: var(--color-body);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     max-width: 600px;
   }
 

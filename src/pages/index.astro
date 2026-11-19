@@ -10,7 +10,20 @@ import Base from '../layouts/Base.astro';
       <p class="bio">Brandon Freitag has been inside the rooms where that happens. He has spent his career on both sides of large-scale organizational change: first inside technology companies helping organizations build the case for it, then as an executive owning the outcome directly. He's the leader who names the real problem before the board has language for it, then builds the architecture to solve it.</p>
       <img src="/brandon.jpg" alt="Brandon Freitag" class="home-photo" width="240" height="300" />
     </div>
-    <figure class="fig-wrap">
+        <ul class="proof">
+          <li class="proof-metric">
+            <span class="proof-metric__figure"><span class="proof-metric__num">2&times;</span><span class="proof-metric__unit">win rate</span></span>
+            <span>Built and led a national strategic architecture practice at Google Cloud, sustaining a win rate twice the field baseline across the company's most complex pursuits.</span>
+          </li>
+          <li class="proof-metric">
+            <span class="proof-metric__figure"><span class="proof-metric__num">90%</span><span class="proof-metric__unit">faster</span></span>
+            <span>As a senior director at a Fortune 200 healthcare company, leading an organization of up to 140, cut time-to-environment for a mission-critical patient platform by 90% and operating costs by 27%.</span>
+          </li>
+          <li>Author of <a href="https://builttobereplaced.com"><em>Built to Be Replaced: How Solution Engineers Outlast AI</em></a>, publishing January 2027.</li>
+          <li>Writes <a href="https://workthatholds.com">Work That Holds</a>, essays on why organizational change holds or doesn't. Its core series, <a href="/work-that-holds"><em>Why Change Fails</em></a>, is six papers on why large-scale initiatives break down and how to design against it.</li>
+          <li>Runs <a href="https://worththatholds.com">Worth That Holds</a>, the advisory practice built on that work: organizational and AI readiness diagnostics for leaders whose change has to hold.</li>
+        </ul>
+        <figure class="fig-wrap">
           <div class="fig">
             <p class="fig__label">Fig. 01 &middot; Both sides of the table</p>
             <div class="fig__body">
@@ -50,28 +63,15 @@ import Base from '../layouts/Base.astro';
             </div>
             <ul class="fig__legend">
               <li><span>10</span>The decision on the table</li>
-              <li><span>12</span>The vendor side, where the case is built</li>
-              <li><span>14</span>The executive side, where the outcome is owned</li>
+              <li><span>12</span>The vendor side</li>
+              <li><span>14</span>The executive side</li>
               <li><span>16</span>The crossing</li>
-              <li><span>18</span>The advisor's seat, serving both sides</li>
+              <li><span>18</span>The advisor's seat</li>
             </ul>
           </div>
           <figcaption class="fig__caption">The career as a patent sheet, a form he has filed for real. The case is built on one side, the outcome is owned on the other, and the practice now sits where it can see both.</figcaption>
         </figure>
-        <ul class="proof">
-          <li class="proof-metric">
-            <span class="proof-metric__figure"><span class="proof-metric__num">2&times;</span><span class="proof-metric__unit">win rate</span></span>
-            <span>Built and led a national strategic architecture practice at Google Cloud, sustaining a win rate twice the field baseline across the company's most complex pursuits.</span>
-          </li>
-          <li class="proof-metric">
-            <span class="proof-metric__figure"><span class="proof-metric__num">90%</span><span class="proof-metric__unit">faster</span></span>
-            <span>As a senior director at a Fortune 200 healthcare company, leading an organization of up to 140, cut time-to-environment for a mission-critical patient platform by 90% and operating costs by 27%.</span>
-          </li>
-          <li>Author of <a href="https://builttobereplaced.com"><em>Built to Be Replaced: How Solution Engineers Outlast AI</em></a>, publishing January 2027.</li>
-          <li>Writes <a href="https://workthatholds.com">Work That Holds</a>, essays on why organizational change holds or doesn't. Its core series, <a href="/work-that-holds"><em>Why Change Fails</em></a>, is six papers on why large-scale initiatives break down and how to design against it.</li>
-          <li>Runs <a href="https://worththatholds.com">Worth That Holds</a>, the advisory practice built on that work: organizational and AI readiness diagnostics for leaders whose change has to hold.</li>
-        </ul>
-        <nav class="home-links" aria-label="Primary destinations">
+    <nav class="home-links" aria-label="Primary destinations">
           <a class="home-links__row" href="https://worththatholds.com">
             <span class="home-links__label">Advisory</span>
             <span class="home-links__name">Worth That Holds</span>
@@ -193,7 +193,16 @@ import Base from '../layouts/Base.astro';
     gap: 0.3rem;
   }
 
+  @media (min-width: 540px) {
+    .fig__legend {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.5rem;
+    }
+  }
+
   .fig__legend li {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
     font-family: var(--font-mono);
     font-size: 0.68rem;
     letter-spacing: 0.04em;
@@ -201,8 +210,6 @@ import Base from '../layouts/Base.astro';
   }
 
   .fig__legend li span {
-    display: inline-block;
-    min-width: 1.6rem;
     font-weight: 500;
     color: var(--color-body);
   }

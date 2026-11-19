@@ -1,22 +1,25 @@
-/* Design tokens — Worth That Holds family (see BRAND.md in worththatholds-site).
-   Personal site carries the company ink-navy accent on the shared paper ground. */
+/* Design tokens — Worth That Holds family, v2 "drafting room"
+   (see BRAND.md and notes/design-standard-v2.md in worththatholds-site).
+   Paper-white ground, IBM Plex tri-family, rules over tints, flat ink. */
 
-/* Fonts are served from this site (Fontsource), not Google Fonts: the same
-   weights the Google link loaded, plus regular italics for <em>. */
-@import '@fontsource/source-serif-4/400.css';
-@import '@fontsource/source-serif-4/600.css';
-@import '@fontsource/source-serif-4/400-italic.css';
-@import '@fontsource/source-sans-3/400.css';
-@import '@fontsource/source-sans-3/400-italic.css';
-@import '@fontsource/source-sans-3/600.css';
-@import '@fontsource/source-sans-3/700.css';
+@import '@fontsource/ibm-plex-serif/400.css';
+@import '@fontsource/ibm-plex-serif/400-italic.css';
+@import '@fontsource/ibm-plex-serif/500.css';
+@import '@fontsource/ibm-plex-serif/600.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
 :root {
   --color-primary: #1F3A5F;
-  --color-bg: #FBFAF7;
-  --color-body: #1A1C20;
-  --color-secondary: #4A4F57;
-  --color-border: #E4E1D8;
-  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --color-gold: #8C6A15;
+  --color-bg: #FFFFFF;
+  --color-body: #16181C;
+  --color-secondary: #43464D;
+  --color-border: #D8DADE;
+  --font-display: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
   --max-width: 720px;
   --line-height-body: 1.7;
 }
@@ -29,7 +32,7 @@
 }
 
 html {
-  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 16px;
   background-color: var(--color-bg);

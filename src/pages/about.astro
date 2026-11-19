@@ -10,7 +10,15 @@ import Base from '../layouts/Base.astro';
 
   <p>Most of Brandon Freitag's career has been spent close to the failure side of a specific problem: the gap between what organizations intend to achieve and what gets delivered. He has stood inside that gap with direct accountability for the outcome, not at a distance from it.</p>
 
-  <p>His career began on the manufacturing floor, where failure was countable scrap and measurement settled arguments. That discipline earned him a solo patent and a Six Sigma Black Belt, and a question he has carried ever since: why do some changes hold while others quietly fail?</p>
+  <p>His career began on the manufacturing floor, where failure was countable scrap and measurement settled arguments. That discipline earned him <a href="https://patents.google.com/patent/US5553538A" target="_blank" rel="noopener noreferrer">a solo patent</a> and a Six Sigma Black Belt, and a question he has carried ever since: why do some changes hold while others quietly fail?</p>
+
+  <figure class="patent">
+    <p class="patent__label">U.S. Patent 5,553,538 &middot; Sep. 10, 1996</p>
+    <img src="/patent-5553538.png" alt="The first drawings sheet of U.S. Patent 5,553,538, showing figures 1 and 2 of the stencil printing method" width="1200" height="832" loading="lazy" />
+    <figcaption class="patent__caption">
+      From the drawings of <a href="https://patents.google.com/patent/US5553538A" target="_blank" rel="noopener noreferrer">Method and apparatus for stencil printing printed circuit boards</a>, sole inventor Brandon R. Freitag, assigned to Motorola. The figures on this site are drawn the way this sheet taught him to draw them.
+    </figcaption>
+  </figure>
 
   <p>From there it moved across two distinct vantage points. For most of it, he worked inside cloud and enterprise technology companies, helping organizations build the case for large-scale change and then supporting the work that followed. Later, he moved to the other side of that equation, serving as an executive at a Fortune 200 company where he owned the outcome directly. The view from inside is different. The failures he had watched from a distance were now his to explain and address.</p>
 
@@ -35,8 +43,39 @@ import Base from '../layouts/Base.astro';
     max-width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    
+
     border: 1px solid var(--color-border);
     margin-bottom: 2rem;
+  }
+
+  .patent {
+    margin: 2rem 0 2.25rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .patent__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    padding: 0.55rem 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .patent img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .patent__caption {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--color-secondary);
+    padding: 0.7rem 0.9rem 0.8rem;
+    border-top: 1px solid var(--color-border);
   }
 </style>
